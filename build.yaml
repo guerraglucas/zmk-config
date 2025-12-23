@@ -20,13 +20,11 @@
 ---
 include:
   # Lado ESQUERDO
-  - board: eyelash_nano
+  - board: eyelash_corne
     shield: corne_left nice_view_adapter nice_view
     artifact-name: corne_left_eyelash
-    cmake-args: -DBOARD_ROOT=/__w/zmk-config/zmk-config
 
   # Lado DIREITO
-  - board: eyelash_nano
+  - board: eyelash_corne
     shield: corne_right nice_view_adapter nice_view
     artifact-name: corne_right_eyelash
-    cmake-args: -DBOARD_ROOT=/__w/zmk-config/zmk-config
