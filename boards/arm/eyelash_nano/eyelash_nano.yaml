@@ -1,15 +1,10 @@
 identifier: eyelash_nano
-name: eyelash nano
+name: Eyelash Nano
 type: mcu
 arch: arm
 toolchain:
   - zephyr
   - gnuarmemb
-  - xtools
-supported:
-  - adc
-  - usb_device
-  - ble
-  - ieee802154
-  - pwm
-  - watchdog
+ram: 256
+flash: 1024
+supported: []
