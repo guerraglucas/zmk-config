@@ -20,6 +20,13 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: sofle_left
+    shield: include:
+  # Lado ESQUERDO
   - board: nice_nano_v2
-    shield: sofle_right
+    shield: corne_left nice_view_adapter nice_view
+    artifact-name: corne_left
+
+  # Lado DIREITO
+  - board: nice_nano_v2
+    shield: corne_right nice_view_adapter nice_view
+    artifact-name: corne_right

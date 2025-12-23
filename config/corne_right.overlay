@@ -1,0 +1,43 @@
+/* config/corne_right.overlay */
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    joystick_keys {
+        compatible = "gpio-keys";
+        
+        /* APOSTA: Pinos Analógicos (14, 15, 16, 10) */
+        joy_up: joy_up {
+            label = "JOY_UP";
+            gpios = <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            linux,code = <103>; /* Seta Cima */
+        };
+
+        joy_down: joy_down {
+            label = "JOY_DOWN";
+            gpios = <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            linux,code = <108>; /* Seta Baixo */
+        };
+
+        joy_left: joy_left {
+            label = "JOY_LEFT";
+            gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            linux,code = <105>; /* Seta Esquerda */
+        };
+
+        joy_right: joy_right {
+            label = "JOY_RIGHT";
+            gpios = <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            linux,code = <106>; /* Seta Direita */
+        };
+
+        joy_center: joy_center {
+            label = "JOY_ENTER";
+            gpios = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            linux,code = <28>; /* Enter */
+        };
+    };
+};

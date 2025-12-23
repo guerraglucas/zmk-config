@@ -1,0 +1,36 @@
+/* config/corne_left.overlay */
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    /* 1. Configuração do GIRO (Volume) */
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        label = "LEFT_ENCODER";
+        a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "okay";
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+        triggers-per-rotation = <20>;
+    };
+
+    /* 2. Configuração do CLIQUE (Mute) como botão extra */
+    gpio_keys {
+        compatible = "gpio-keys";
+        
+        knob_click: knob_click {
+            label = "KNOB_CLICK";
+            /* APOSTA DE PINO: 6. Se não der mute, tentaremos outros */
+            gpios = <&pro_micro 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            linux,code = <113>; /* Código Linux para MUTE */
+        };
+    };
+};
