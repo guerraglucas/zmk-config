@@ -6,7 +6,7 @@
         zmk,kscan = &kscan0;
     };
 
-    /* APOSTA NOVA DO KNOB: Pinos 8 e 9 (pois 21/20 estão ocupados pelas teclas) */
+    /* Knob (Pinos 8 e 9) */
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
@@ -22,7 +22,7 @@
         triggers-per-rotation = <20>;
     };
     
-    /* Botão do Knob: Aposta no pino 10 (já que o 6 está ocupado pelas linhas) */
+    /* Botão do Knob (Pino 10) */
     gpio_keys {
         compatible = "gpio-keys";
         knob_click: knob_click {
@@ -33,9 +33,8 @@
     };
 };
 
-/* --- REESCREVENDO A MATRIZ DE TECLAS (Cópia do Chinês) --- */
+/* --- MATRIZ DE TECLAS (PINAGEM DO CHINÊS) --- */
 &kscan0 {
-    /* Linhas: 4, 5, 6, 7 com Pull Down */
     row-gpios
         = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -43,7 +42,6 @@
         , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
     
-    /* Colunas Esquerda: 21, 20, 19, 18, 15, 14 */
     col-gpios
         = <&pro_micro 21 GPIO_ACTIVE_HIGH>
         , <&pro_micro 20 GPIO_ACTIVE_HIGH>

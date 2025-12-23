@@ -18,13 +18,13 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-  include:
+include:
   # Lado ESQUERDO
-  - board: nice_nano
+  - board: eyelash_nano
     shield: corne_left nice_view_adapter nice_view
-    artifact-name: corne_left
+    artifact-name: corne_left_eyelash
 
   # Lado DIREITO
-  - board: nice_nano
+  - board: eyelash_nano
     shield: corne_right nice_view_adapter nice_view
-    artifact-name: corne_right
+    artifact-name: corne_right_eyelash
