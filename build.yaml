@@ -20,11 +20,9 @@
 ---
 include:
   # Lado ESQUERDO
-  - board: eyelash_corne
-    shield: corne_left nice_view_adapter nice_view
+  - board: eyelash_corne_left
     artifact-name: corne_left_eyelash
 
   # Lado DIREITO
-  - board: eyelash_corne
-    shield: corne_right nice_view_adapter nice_view
+  - board: eyelash_corne_right
     artifact-name: corne_right_eyelash
