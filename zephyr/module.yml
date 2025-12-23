@@ -1,3 +1,6 @@
+name: zmk_config
 build:
   settings:
     board_root: .
+    dts_root: .
+    soc_root: .

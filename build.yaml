@@ -21,8 +21,8 @@
 include:
   # Lado ESQUERDO
   - board: eyelash_corne_left
-    artifact-name: corne_left_eyelash
+    artifact-name: eyelash_left
 
   # Lado DIREITO
   - board: eyelash_corne_right
-    artifact-name: corne_right_eyelash
+    artifact-name: eyelash_right
